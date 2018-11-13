@@ -1,0 +1,7 @@
+def mystery(x, y):
+    result = (x + y) / (y - x)
+    return result
+
+def lol():
+    print(mystery(2,3))
+lol()
