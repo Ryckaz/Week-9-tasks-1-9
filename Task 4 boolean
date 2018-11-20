@@ -1,1 +1,16 @@
+def pg(userInput):
+    for page in range(userInput):
+        if page % 2 == 0:
+        #print(page)
+            return True
+        else:
+            return False
+        #print("%60s%d" % (" ", page))
+
+def main():
+    userInput = int(input("Please enter page number: "))
+    print(pg(userInput))
+
+main()
+    
 
