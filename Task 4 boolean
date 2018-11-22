@@ -1,16 +1,18 @@
-def pg(userInput):
-    for page in range(userInput):
-        if page % 2 == 0:
-        #print(page)
-            return True
-        else:
-            return False
-        #print("%60s%d" % (" ", page))
-
-def main():
-    userInput = int(input("Please enter page number: "))
-    print(pg(userInput))
-
-main()
+def pg(page):
+    if page % 2 == 0:      #IT IS EASER TO UNDERSTAND IF 0 = TRUE, NOT = FALSE
+        return True
+    else:
+        return False
     
+def main():
+    if pg(page):
+        print("\n\n\n\n", "Page", page)
+    else:
+        print("\n\n\n\n")
+        print("%60s%d" % ("Page ",page))
+        
+
+page = int(input("Please enter a number for our page for it to go on the left or on the right side: "))
+main()
+
 
