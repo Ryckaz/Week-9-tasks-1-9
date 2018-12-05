@@ -1,0 +1,50 @@
+class CashRegister :
+
+    def __init__(self) :
+        self._itemCount = 0
+        self._totalPrice = 0.0
+
+
+    def addItem(self, price) :
+        self._itemCount = self._itemCount + 1
+        self._totalPrice = self._totalPrice + price
+
+
+    def getTotal(self) :
+        return self._totalPrice
+ 
+    def getCount(self) :
+        return self._itemCount
+
+    def getPounds (self):
+        return str(float(self._totalPrice)) + "£"
+
+    def giveChange(self,payment):
+        self._payment = payment
+        self._change = self._payment - self._totalPrice
+        return str(self._change) + "£"
+         
+ 
+    def clear(self) :
+        self._itemCount = 0
+        self._totalPrice = 0.0
+
+
+register1 = CashRegister()
+register1.addItem(0.90)
+register1.addItem(0.95)
+
+register2 = CashRegister()
+register2.addItem(1.90)
+
+
+print("Our register1 contains: ", register1.getCount(),
+      "items. At the total price of:", register1.getPounds(),
+      "\nYour change: " ,register1.giveChange(10))
+
+print("\nOur register2 contains: ", register2.getCount(),
+      "items. At the total price of:", register2.getPounds(),
+      "\nYour change: ",register2.giveChange(10))
+
+
+
